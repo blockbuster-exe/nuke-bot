@@ -5,7 +5,6 @@ import discord
 from discord.ext import commands
 from time import sleep
 import random
-from bot_token import TOKEN
 
 client = commands.Bot(
     command_prefix=".",
@@ -111,5 +110,6 @@ async def on_ready():
     await client.change_presence(
         activity=discord.Activity(name='Mayhem', type=discord.ActivityType.watching))
 
+TOKEN = input("token: ")
 
 client.run(TOKEN)
