@@ -5,6 +5,7 @@ import discord
 from discord.ext import commands
 from time import sleep
 import random
+from bot_token import TOKEN
 
 client = commands.Bot(
     command_prefix=".",
@@ -111,4 +112,4 @@ async def on_ready():
         activity=discord.Activity(name='Mayhem', type=discord.ActivityType.watching))
 
 
-client.run("Nzk5NTY5MDU2OTQ4NjgyNzUy.YAFetg.q_u-ljqDpgqfmkNL5p8TKjii4wg")
+client.run(TOKEN)
