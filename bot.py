@@ -57,6 +57,7 @@ async def troll(ctx, mention, *message):
     await ctx.send(f"Trolling {ctx.message.mentions[0].name} in DMs")
     for i in range(1, 100):
         await channel.send(" ".join(message))
+    await ctx.send(f"Finished trolling {ctx.message.mentions[0].name} in DMs")
 
 
 @client.command(name='delete_every_channel')
@@ -94,6 +95,13 @@ async def on_message(message):
         return
 
     await client.process_commands(message)
+
+
+@client.command(name='exit')
+async def exit(ctx):
+    await ctx.send("Going offline, good byw :(")
+    quit()
+
 
 
 @client.event
